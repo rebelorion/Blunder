@@ -55,3 +55,10 @@ form {
     cursor: pointer; 
     color: black; 
 }
+
+/* кнопки */
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
