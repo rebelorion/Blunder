@@ -104,11 +104,11 @@ column {
 column > photo {
     background-image: none;
     box-shadow: 0px 0px 2px 0px var(--shadow-color);
-    min-width: 60vh; 
-    min-height: 60vh;   
+    width: 60vh; 
+    height: 60vh;   
 }
 
-column > div {
+div {
     font-size: 18px;
     color: var(--header-text-color);
     padding-inline: 5vw;
@@ -119,5 +119,26 @@ column > split {
     width: 80%;
     flex-direction: row;
     justify-content: space-around;
+    align-items: start;
     padding-block: 2vh;
+}
+
+split photo {
+    background-image: none;
+    box-shadow: 0px 0px 2px 0px var(--shadow-color);
+    width: 30vmin; 
+    height: 30vmin;
+}
+
+split column {
+    box-shadow: none;
+    width: 30%;
+}
+
+
+photo:hover * {
+    opacity: 1;
+}
+photo * {
+    opacity: 0;
 }
