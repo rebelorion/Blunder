@@ -1,12 +1,13 @@
 :root {
     --background-color: white;
-    --header-text-color: black;
+    --header-text-color: rgb(255, 255, 255);
     --shadow-color: rgba(34, 60, 80, 0.6);
     --contra-color: grey;
     --back-color: rgb(192, 187, 187);
-    --back-colorGreen: rgb(131, 241, 190);
-    --back-colorBlue: rgb(82, 149, 193);
-    --back-colorPink: rgb(226, 195, 225);
+    --back-colorGreen: rgb(0, 128, 128);
+    --back-colorDesert: rgb(214, 192, 162);
+    --back-colorWhite: rgb(255, 255, 255);
+    --back-colorWhite2: rgb(255, 255, 255);
 }
 
 h1 {
@@ -38,7 +39,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--back-colorBlue);
+    background-color: var(--back-colorDesert);
 }
 
 form {
@@ -75,6 +76,26 @@ p {
     justify-content: center;
     align-items: center;
 }
+.special-btn1{
+    color: white;
+    border-radius: 20px;
+    background: linear-gradient(45deg,#20df2d,#11bcfa );
+    margin: 0 50px;
+    border: 1px solid #ccc;  /* уменьшение толщины границы */
+    border-radius: 20px;       /* и здесь */
+}
+.special-btn2{
+    color: white;
+    border-radius: 20px;
+    background: linear-gradient(45deg,#20df2d,#11bcfa );
+    margin: 0 50px;
+    border: 1px solid #ccc;  /* уменьшение толщины границы */
+    border-radius: 20px;       /* и здесь */
+    margin: -50px;
+    
+
+}
+
 navbar {
     position: sticky; /*навигация сверху всегда*/
     top: -1px;
@@ -90,8 +111,9 @@ navbar {
     box-shadow: 0px 0px 5px 0px var(--shadow-color);
     background-color: var(--background-color);
     background-color: var(--back-colorGreen);
-
+    text-shadow: 0px 5px 10px #000000;
 }
+
 
 navbar * {
     padding: 2%;
@@ -106,7 +128,7 @@ column {
     align-items: center;
     width: 70%;
     box-shadow: 0px 0px 2px 0px var(--shadow-color);
-    background-color: var(--back-colorPink);
+    background-color: var(--back-colorWhite);
 }
 
 column > photo {
