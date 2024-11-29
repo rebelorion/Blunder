@@ -41,3 +41,17 @@ form {
     border-color: var(--contra-color);
     box-shadow: 0px 0px 7px 0px var(--shadow-color);
 }
+.password-container {
+    position: relative;
+}
+.password-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%; /* Занимает всю ширину родителя */
+}
+
+.eye-icon {
+    cursor: pointer; 
+    color: black; 
+}

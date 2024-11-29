@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>Регистрация</title>
-  <link rel="stylesheet" 
-  href="../static/styles/style.css">
+  <link rel="stylesheet" href="../static/styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Подключаем Font Awesome -->
 </head>
 <body class="registration">
 
@@ -11,13 +11,34 @@
 
 <form action="/register" method="post">  <!-- Добавлено action и метод -->
   <label for="username">Имя пользователя:</label>
-  <input type="text" id="username" name="username" required><br>
+  <input type="text" id="username" name="username" required maxlength="20"><br>
 
   <label for="password">Пароль:</label>
-  <input type="password" id="password" name="password" required><br>
+  <div class="password-container">
+      <input type="password" id="password" name="password" required maxlength="20">
+      <span id="toggle-password" class="eye-icon">
+          <i class="fas fa-eye"></i> <!-- Иконка открытого глаза -->
+      </span>
+  </div>
 
-  <input type="submit" value="Зарегистрироваться">
+  <br><input type="submit" value="Зарегистрироваться">
 </form>
+
+<script>
+    const togglePassword = document.getElementById('toggle-password');
+    const passwordInput = document.getElementById('password');
+
+    togglePassword.addEventListener('click', function () {
+        // Переключаем тип input между 'password' и 'text'
+        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordInput.setAttribute('type', type);
+        
+        // Меняем иконку в зависимости от состояния
+        this.querySelector('i').classList.toggle('fa-eye'); // Открытый глаз
+        this.querySelector('i').classList.toggle('fa-eye-slash'); // Закрытый глаз
+    });
+</script>
+
 
 </body>
 </html>
