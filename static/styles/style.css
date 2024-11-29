@@ -145,3 +145,9 @@ photo:hover * {
 photo * {
     opacity: 0;
 }
+
+photo {
+    border-radius: 15px;
+    border-color: var(--contra-color);
+    border-style: solid;
+}
