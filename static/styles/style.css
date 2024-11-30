@@ -83,25 +83,18 @@ p {
 .special-btn1{
     color: white;
     border-radius: 20px;
-    background: linear-gradient(45deg,#20df2d,#11bcfa );
-    margin: 0 50px;
+    background: linear-gradient(45deg, var(--back-colorGreen),rgb(0,66,66) );
     border: 1px solid #ccc;  /* уменьшение толщины границы */
     border-radius: 20px;       /* и здесь */
+    font-size: 14px;
 }
 .special-btn1 {
     font-family: 'Courier New', Courier, monospace; /* Применяем другой шрифт для кнопок с классом special-btn1 */
 }
-.special-btn2{
-    color: white;
-    border-radius: 20px;
-    background: linear-gradient(45deg,#20df2d,#11bcfa );
-    margin: 0 50px;
-    border: 1px solid #ccc;  /* уменьшение толщины границы */
-    border-radius: 20px;       /* и здесь */
+a.special-btn1 {
+    padding: 6px;
 }
-.special-btn2 {
-    font-family: 'Courier New', Courier, monospace; /* Применяем другой шрифт для кнопок с классом special-btn1 */
-}
+
 navbar {
     position: sticky; /*навигация сверху всегда*/
     top: -1px;
@@ -123,8 +116,12 @@ navbar {
 
 navbar * {
     padding: 2%;
-    text-decoration: none;
     color: var(--header-text-color);
+}
+
+a {
+    text-decoration: none;
+    font-size: 14px;
 }
 
 column {
