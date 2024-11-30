@@ -79,19 +79,26 @@ p {
     align-items: center;
 }
 .special-btn1{
+    transition: 200ms;
+    transition-property: scale;
+
     color: white;
     border-radius: 20px;
     background: linear-gradient(45deg, var(--back-colorGreen),rgb(0,66,66) );
     border: 1px solid #ccc;  /* уменьшение толщины границы */
     border-radius: 20px;       /* и здесь */
     font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.special-btn1 {
-    font-family: 'Courier New', Courier, monospace; /* Применяем другой шрифт для кнопок с классом special-btn1 */
-}
 a.special-btn1 {
     padding: 6px;
+}
+
+.special-btn1:hover {
+    transition: 200ms;
+    transition-property: scale;
+    scale: 1.1;
 }
 
 navbar {
@@ -164,7 +171,7 @@ split photo {
 
 split column {
     box-shadow: none;
-    width: 30%;
+    width: 50%;
 }
 split.full-width {
     width: 100%;
