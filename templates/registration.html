@@ -9,7 +9,7 @@
 
 <h1>Регистрация</h1>
 
-<form method="post">
+<form method="post" onsubmit="handleSubmit(event)">
   <label for="username">login/emeil:</label>
   <input type="text" id="username" name="username" required maxlength="20"><br>
 
@@ -21,25 +21,15 @@
       </span>
   </div>
 
-  <br><input type="submit" class="btn special-btn1" value="Зарегистрироваться">
+  <br><input id="reg-button" type="submit" class="btn special-btn1" value="Зарегистрироваться">
+  <div id="messageElement"></div>
 </form>
 <split>
   <a href="../templates/login.html" class="btn special-btn1">Вход</a>
   <a href="../templates/registration.html" class="btn special-btn1">Регистрация</a>
 </split>
 
-<script>
-    const togglePassword = document.getElementById('toggle-password');
-    const passwordInput = document.getElementById('password');
-
-    togglePassword.addEventListener('click', function () {
-        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-        passwordInput.setAttribute('type', type);
-        
-        this.querySelector('i').classList.toggle('fa-eye');
-        this.querySelector('i').classList.toggle('fa-eye-slash');
-    });
-</script>
+<script src="./js/registration.js"></script>
 
 </body>
 </html>
