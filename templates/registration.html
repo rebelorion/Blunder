@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Регистрация</title>
+  <title>Вход</title>
   <link rel="stylesheet" href="../static/styles/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Подключаем Font Awesome -->
 </head>
 <body class="registration">
 
-<h1>Регистрация</h1>
+<h1>Вход</h1>
 
-<form action="/register" method="post">  <!-- Добавлено action и метод -->
-  <label for="username">Имя пользователя:</label>
+<form action="registration.php" method="post">  <!-- Изменено на register.php -->
+  <label for="username">login/emeil:</label>
   <input type="text" id="username" name="username" required maxlength="20"><br>
 
   <label for="password">Пароль:</label>
@@ -29,16 +29,13 @@
     const passwordInput = document.getElementById('password');
 
     togglePassword.addEventListener('click', function () {
-        // Переключаем тип input между 'password' и 'text'
         const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
         passwordInput.setAttribute('type', type);
         
-        // Меняем иконку в зависимости от состояния
-        this.querySelector('i').classList.toggle('fa-eye'); // Открытый глаз
-        this.querySelector('i').classList.toggle('fa-eye-slash'); // Закрытый глаз
+        this.querySelector('i').classList.toggle('fa-eye');
+        this.querySelector('i').classList.toggle('fa-eye-slash');
     });
 </script>
-
 
 </body>
 </html>
