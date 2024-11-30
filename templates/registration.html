@@ -5,12 +5,12 @@
   <link rel="stylesheet" href="../static/styles/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Подключаем Font Awesome -->
 </head>
-<body class="registration">
 
+<body class="registration">
 <h1>Регистрация</h1>
 
-<form method="post" onsubmit="handleSubmit(event)">
-  <label for="username">login/emeil:</label>
+<form method="post">
+  <label for="username">login/email:</label>
   <input type="text" id="username" name="username" required maxlength="20"><br>
 
   <label for="password">Пароль:</label>
@@ -21,15 +21,25 @@
       </span>
   </div>
 
-  <br><input id="reg-button" type="submit" class="btn special-btn1" value="Зарегистрироваться">
-  <div id="messageElement"></div>
+  <br><input type="submit" class="btn special-btn1" value="Зарегистрироваться">
 </form>
 <split>
-  <a href="../templates/login.html" class="btn special-btn1">Вход</a>
+  <a href="../templates/login.html" class="btn special-btn1" >Вход</a>
   <a href="../templates/registration.html" class="btn special-btn1">Регистрация</a>
 </split>
 
-<script src="./js/registration.js"></script>
+<script>
+    const togglePassword = document.getElementById('toggle-password');
+    const passwordInput = document.getElementById('password');
+
+    togglePassword.addEventListener('click', function () {
+        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordInput.setAttribute('type', type);
+        
+        this.querySelector('i').classList.toggle('fa-eye');
+        this.querySelector('i').classList.toggle('fa-eye-slash');
+    });
+</script>
 
 </body>
 </html>
