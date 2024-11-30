@@ -47,7 +47,7 @@ form {
 
 
 
-body {
+body.chats {
   padding: 5%;
   background-color: #F5F5F5;
 }
