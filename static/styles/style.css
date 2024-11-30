@@ -30,7 +30,7 @@ body.registration {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    width: 30%;    
+    width: %;    
 }
 
 body {
@@ -84,6 +84,9 @@ p {
     border: 1px solid #ccc;  /* уменьшение толщины границы */
     border-radius: 20px;       /* и здесь */
 }
+.special-btn1 {
+    font-family: 'Courier New', Courier, monospace; /* Применяем другой шрифт для кнопок с классом special-btn1 */
+}
 .special-btn2{
     color: white;
     border-radius: 20px;
@@ -92,10 +95,10 @@ p {
     border: 1px solid #ccc;  /* уменьшение толщины границы */
     border-radius: 20px;       /* и здесь */
     margin: -50px;
-    
-
 }
-
+.special-btn2 {
+    font-family: 'Courier New', Courier, monospace; /* Применяем другой шрифт для кнопок с классом special-btn1 */
+}
 navbar {
     position: sticky; /*навигация сверху всегда*/
     top: -1px;
@@ -178,3 +181,37 @@ photo {
     border-color: var(--contra-color);
     border-style: solid;
 }
+/* подвал */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 0 45%;
+    color: var(--header-color);
+    background-color: var(--contra-color);
+    font-size: 20px;
+    background-color: var(--back-colorGreen);
+  }
+  footer > ul {
+    margin: 0;
+  }
+  footer * {
+    text-decoration: none;
+    color: var(--info-text-color);
+  }
+  footer > * {
+    padding: 2vw;
+  }
+  footer img {
+    width: 64px;
+    padding-inline: 1vw;
+  }
+  @media only screen and (max-width: 540px) {
+    footer {
+      display: block;
+      justify-content: center;
+    }
+    footer img {
+      width: 12vw
+    }
+  }
