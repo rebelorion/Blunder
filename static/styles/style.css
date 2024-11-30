@@ -92,6 +92,9 @@ p {
     font-size: 14px;
     font-family: 'Courier New', Courier, monospace;
 }
+.btn {
+    padding: 10px 15px; /* Уменьшите значения по своему усмотрению */
+}
 
 a.special-btn1 {
     padding: 6px;
