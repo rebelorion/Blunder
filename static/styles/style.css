@@ -502,7 +502,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50%;
+    width: 100%;
     color: var(--header-color);
     background-color: var(--contra-color);
     font-size: 20px;
@@ -534,3 +534,7 @@ footer {
   filler {
     margin-block: 35%;
   }
+
+.tags {
+    width: 100%;
+}
