@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" 
     href="../static/styles/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" />
     <title>Профиль</title>
     <style>
         .btn{
@@ -12,24 +15,70 @@
         }
     </style>
 </head>
-<body> 
-    <navbar>
-        <a href="./main.html" class="btn">Главная</a>
-        <a href="./profile.html" class="btn">Профиль</a>
-        <a href="./login.html" class="btn">Выйти</a>
-    </navbar>
+<body class = "profile"> 
+    
+    <div class="row">
+        <nav class="menu">
+          <ul class="items">
+            <li class="item">
+              <i class="fa fa-home" aria-hidden="true"></i>
+            </li>
+            <li class="item">
+              <i class="fa fa-user" aria-hidden="true"></i>
+            </li>
+            <li class="item">
+              <i class="fa fa-pencil" aria-hidden="true"></i>
+            </li>
+            <li class="item item-active">
+              <i class="fa fa-commenting" aria-hidden="true"></i>
+            </li>
+            <li class="item">
+              <i class="fa fa-file" aria-hidden="true"></i>
+            </li>
+            <li class="item">
+              <i class="fa fa-cog" aria-hidden="true"></i>
+            </li>
+          </ul>
+        </nav>
 
-    <column>
+    <section class="profile">
         <split class="full-width">
-            <photo class="button">
+            <photo class="button" style="background-image:url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);">
                 <div>
                 поменять изображение
                 </div>
             </photo>
+            <span>
+                <div>
+                    <p>
+                        Борис Борисович 12
+                    </p>
+                    <p>Люблю картошку</p>
+                </div>
+            </span>
+        
             <column>
                 <div class="field">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </div>
+                    <label for="usertags">Имя</label>
+                    <input type="text" 
+                        id="usertags" 
+                        name="usertags" 
+                        required maxlength="150" minlength="5">
+                    </div>
+                <div class="field">
+                    <label for="usertags">Возраст</label>
+                    <input type="text" 
+                        id="usertags" 
+                        name="usertags" 
+                        required maxlength="150" minlength="5">
+                    </div>
+                 <div class="field">
+                    <label for="usertags">Пол</label>
+                    <input type="text" 
+                        id="usertags" 
+                        name="usertags" 
+                        required maxlength="150" minlength="5">
+                    </div>
                 <div class="field">
                 <label for="usertags">Введите свои теги:</label>
                 <input type="text" 
@@ -48,7 +97,9 @@
             </column>
         </split>
         <filler></filler>
-    </column>
+    </section>
+
+    </div>
     <footer>
         <div id="contacts">
             © 2024 Blunder

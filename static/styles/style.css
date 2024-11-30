@@ -495,7 +495,9 @@ body.chats{
 .clickable {
   cursor: pointer;
 }
-  
+
+
+
   
 /* подвал */
 footer {
@@ -533,4 +535,23 @@ footer {
   }
   filler {
     margin-block: 35%;
+  }
+
+
+  body.profile{
+    background-color: var(--back-colorDesert);
+    text-transform: uppercase;
+  font-family:'Montserrat', sans-serif;
+  font-size: 13pt;
+  }
+  
+  
+  section.profile
+   {
+    width: 90%;
+    height: 1000px;
+    box-shadow: 0px 8px 10px rgba(0,0,0,0.20);
+    overflow: hidden;
+    background-color: #ffffff;
+    display: inline-block;
   }
