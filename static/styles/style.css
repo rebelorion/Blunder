@@ -81,19 +81,26 @@ p {
     align-items: center;
 }
 .special-btn1{
+    transition: 200ms;
+    transition-property: scale;
+
     color: white;
     border-radius: 20px;
     background: linear-gradient(45deg, var(--back-colorGreen),rgb(0,66,66) );
     border: 1px solid #ccc;  /* уменьшение толщины границы */
     border-radius: 20px;       /* и здесь */
     font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.special-btn1 {
-    font-family: 'Courier New', Courier, monospace; /* Применяем другой шрифт для кнопок с классом special-btn1 */
-}
 a.special-btn1 {
     padding: 6px;
+}
+
+.special-btn1:hover {
+    transition: 200ms;
+    transition-property: scale;
+    scale: 1.1;
 }
 
 navbar {
@@ -166,7 +173,7 @@ split photo {
 
 split column {
     box-shadow: none;
-    width: 30%;
+    width: 50%;
 }
 split.full-width {
     width: 100%;
@@ -189,16 +196,15 @@ photo {
 /* chat */
 
 /* ===== MENU ===== */
+
+body.chats{
+  background-color: var(--back-colorDesert);
+}
 .menu {
-  float: left;
-  height: 700px;;
+  height: 1000px;
   width: 70px;
-  background: #4768b5;
-  background: -webkit-linear-gradient(#4768b5, #35488e);
-  background: -o-linear-gradient(#4768b5, #35488e);
-  background: -moz-linear-gradient(#4768b5, #35488e);
-  background: linear-gradient(#4768b5, #35488e);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19);
+  background: linear-gradient(var(--back-colorGreen), rgb(0, 66, 66));
+  box-shadow: 0 10px 20px var(--shadow-color);
 }
 
 .menu .items {
@@ -209,38 +215,39 @@ photo {
 
 .menu .items .item {
   height: 70px;
-  border-bottom: 1px solid #6780cc;
+  border-bottom: 1px solid rgb(0, 66, 66);
   display:flex;
   justify-content: center;
   align-items: center;
-  color: #9fb5ef;
+  color: #ffffff;
   font-size: 17pt;
 }
 
 .menu .items .item-active {
-  background-color:#5172c3;
+  background-color:rgb(0, 66, 66);
   color: #FFF;
 }
 
 .menu .items .item:hover {
   cursor: pointer;
-  background-color: #4f6ebd;
-  color: #cfe5ff;
+  background-color: rgb(0, 66, 66);
+  color: #ffffff;
 }
+
 
 /* === CONVERSATIONS === */
 
 .discussions {
   width: 35%;
-  height: 700px;
+  height: 1000px;
   box-shadow: 0px 8px 10px rgba(0,0,0,0.20);
   overflow: hidden;
-  background-color: #87a3ec;
+  background-color: #ffffff;
   display: inline-block;
 }
 
 .discussions .discussion {
-  width: 100%;
+  width: auto;
   height: 90px;
   background-color: #FAFAFA;
   border-bottom: solid 1px #E0E0E0;
@@ -276,18 +283,6 @@ photo {
   font-family: 'Montserrat', sans-serif;;
 }
 
-.discussions .search .searchbar *::-webkit-input-placeholder {
-    color: #E0E0E0;
-}
-.discussions .search .searchbar input *:-moz-placeholder {
-    color: #E0E0E0;
-}
-.discussions .search .searchbar input *::-moz-placeholder {
-    color: #E0E0E0;
-}
-.discussions .search .searchbar input *:-ms-input-placeholder {
-    color: #E0E0E0;
-}
 
 .discussions .message-active {
   width: 98.5%;
@@ -297,7 +292,7 @@ photo {
 }
 
 .discussions .discussion .photo {
-    margin-left:20px;
+    margin-left:5px;
     display: block;
     width: 45px;
     height: 45px;
@@ -320,7 +315,6 @@ photo {
 }
 
 .discussions .discussion .name {
-  margin: 0 0 0 20px;
   font-family:'Montserrat', sans-serif;
   font-size: 11pt;
   color:#515151;
@@ -346,6 +340,7 @@ photo {
 
 .chat {
   width: calc(65% - 85px);
+  background-color: #ffffff;
 }
 
 .header-chat {
@@ -431,7 +426,7 @@ photo {
 }
 
 .footer-chat {
-  width: calc(65% - 66px);
+  width: calc(55% - 56px);
   height: 80px;
   display:flex;
   align-items: center;
@@ -450,7 +445,7 @@ photo {
 
 .chat .footer-chat .send {
   color:#fff;
-  background-color: #4f6ebd;
+  background-color: var(--back-colorGreen);
   position: absolute;
   right: 50px;
   padding: 12px 12px 12px 12px;
