@@ -7,9 +7,9 @@
 </head>
 <body class="registration">
 
-<h1>Регистрация</h1>
+<h1>Вход</h1>
 
-<form method="post">
+<form action="registration.php" method="post">  <!-- Изменено на register.php -->
   <label for="username">login/emeil:</label>
   <input type="text" id="username" name="username" required maxlength="20"><br>
 
@@ -21,11 +21,11 @@
       </span>
   </div>
 
-  <br><input type="submit" class="btn special-btn1" value="Зарегистрироваться">
+  <br><input type="submit" class="btn special-btn1" value="Войти">
 </form>
 <split>
-  <a href="../templates/login.html" class="btn special-btn1">Вход</a>
-  <a href="../templates/registration.html" class="btn special-btn1">Регистрация</a>
+  <a href="../templates/login.html" type="button" class="btn special-btn1">Вход</a>
+  <a href="../templates/registration.html" type="button" class="btn special-btn1">Регистрация</a>
 </split>
 
 <script>

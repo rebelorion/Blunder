@@ -8,6 +8,7 @@
     --back-colorDesert: rgb(214, 192, 162);
     --back-colorWhite: rgb(255, 255, 255);
     --back-colorWhite2: rgb(255, 255, 255);
+    --div-color: rgb(29, 29, 29);
 }
 
 h1 {
@@ -30,7 +31,8 @@ body.registration {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    width: 30%;    
+    width: 50%;   
+    scale: 1.4; 
 }
 
 body {
@@ -57,17 +59,17 @@ form {
 }
 .password-container {
     position: relative;
-}
-.password-container {
-    position: relative;
     display: flex;
     flex-direction: row;
     width: 100%; /* Занимает всю ширину родителя */
+    padding: 0;
+    padding-bottom: 2vh;
 }
 
 .eye-icon {
     cursor: pointer; 
     color: black; 
+    padding-left: 5px;
 }
 
 /* кнопки */
@@ -77,28 +79,28 @@ p {
     align-items: center;
 }
 .special-btn1{
+    transition: 200ms;
+    transition-property: scale;
+
     color: white;
     border-radius: 20px;
-    background: linear-gradient(45deg,#20df2d,#11bcfa );
-    margin: 0 50px;
+    background: linear-gradient(45deg, var(--back-colorGreen),rgb(0,66,66) );
     border: 1px solid #ccc;  /* уменьшение толщины границы */
     border-radius: 20px;       /* и здесь */
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
 }
-.special-btn1 {
-    font-family: 'Courier New', Courier, monospace; /* Применяем другой шрифт для кнопок с классом special-btn1 */
+
+a.special-btn1 {
+    padding: 6px;
 }
-.special-btn2{
-    color: white;
-    border-radius: 20px;
-    background: linear-gradient(45deg,#20df2d,#11bcfa );
-    margin: 0 50px;
-    border: 1px solid #ccc;  /* уменьшение толщины границы */
-    border-radius: 20px;       /* и здесь */
-    margin: -50px;
+
+.special-btn1:hover {
+    transition: 200ms;
+    transition-property: scale;
+    scale: 1.1;
 }
-.special-btn2 {
-    font-family: 'Courier New', Courier, monospace; /* Применяем другой шрифт для кнопок с классом special-btn1 */
-}
+
 navbar {
     position: sticky; /*навигация сверху всегда*/
     top: -1px;
@@ -120,8 +122,12 @@ navbar {
 
 navbar * {
     padding: 2%;
-    text-decoration: none;
     color: var(--header-text-color);
+}
+
+a {
+    text-decoration: none;
+    font-size: 14px;
 }
 
 column {
@@ -143,11 +149,11 @@ column > photo {
 
 div {
     font-size: 18px;
-    color: var(--header-text-color);
+    color: var(--div-color);
     padding-inline: 5vw;
     padding-block: 2vh;
 }
-column > split {
+split {
     display: flex;
     width: 80%;
     flex-direction: row;
@@ -165,7 +171,10 @@ split photo {
 
 split column {
     box-shadow: none;
-    width: 30%;
+    width: 50%;
+}
+split.full-width {
+    width: 100%;
 }
 
 
