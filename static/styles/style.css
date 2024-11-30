@@ -92,6 +92,9 @@ p {
     font-size: 14px;
     font-family: 'Courier New', Courier, monospace;
 }
+.btn {
+    padding: 10px 15px; /* Уменьшите значения по своему усмотрению */
+}
 
 a.special-btn1 {
     padding: 6px;
@@ -504,7 +507,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50%;
+    width: 100%;
     color: var(--header-color);
     background-color: var(--contra-color);
     font-size: 20px;
@@ -554,4 +557,51 @@ footer {
     overflow: hidden;
     background-color: #ffffff;
     display: inline-block;
+    margin-block: 20%;
   }
+
+.tags {
+    width: 100%;
+}
+
+.dropbtn {
+    background-color: var(--back-colorGreen);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  /* Контейнер <div> - необходим для размещения выпадающего содержимого */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    justify-content: left;
+  }
+  
+  /* Выпадающее содержимое (скрыто по умолчанию) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--back-colorDesert);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px var(--shadow-color);
+    z-index: 1;
+  }
+  
+  /* Ссылки внутри выпадающего списка */
+  .dropdown-content a {
+    color: var(--div-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Изменение цвета выпадающих ссылок при наведении курсора */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Показать выпадающее меню при наведении курсора */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Изменение цвета фона кнопки раскрывающегося списка при отображении содержимого раскрывающегося списка */
+  .dropdown:hover .dropbtn {background-color: rgb(0, 66, 66);}
